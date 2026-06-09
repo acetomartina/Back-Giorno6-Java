@@ -30,14 +30,17 @@ public class Main {
             }
         }
 
+        HashSet<String> paroleDistinte = new HashSet<>(paroleUniche);
+        paroleDistinte.removeAll(paroleDuplicate);
+
         System.out.println("\nParole duplicate: ");
         System.out.println(paroleDuplicate);
 
         System.out.println("\nNumero parole distinte: ");
-        System.out.println(paroleUniche.size());
+        System.out.println(paroleDistinte.size());
 
         System.out.println("\nParole distinte: ");
-        System.out.println(paroleUniche);
+        System.out.println(paroleDistinte);
 
     }
 }
