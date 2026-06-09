@@ -8,8 +8,15 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Quante parole vuoi inserire?");
-        int n = Integer.parseInt(scanner.nextLine());
+        int n;
+
+        try {
+            System.out.println("Quante parole vuoi inserire?");
+            n = Integer.parseInt(scanner.nextLine());
+        } catch (NumberFormatException e){
+            System.out.println("Valore non valido.");
+            return;
+        }
 
         HashSet<String> paroleUniche = new HashSet<>();
         HashSet<String> paroleDuplicate = new HashSet<>();
